@@ -128,3 +128,8 @@ If input data is invalid you should return 0 (as in no breaks are needed if we d
 function breakChocolate(n:number, m:number):number {
     return n <1 || m < 1 ? 0 : (n * m) -1
     }
+
+
+    function squareDigits(num:number)    {
+        return  +(num.toString().split('').map((x) => +x * +x).join(''))
+    }
