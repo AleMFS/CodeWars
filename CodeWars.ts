@@ -1,24 +1,53 @@
+/* 7 kyu Complementary DNA
+    Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
+
+If you want to know more: http://en.wikipedia.org/wiki/DNA
+
+In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+
+More similar exercise are found here: http://rosalind.info/problems/list-view/ (source)
+*/
+export class Kata {
+    static dnaStrand(dna: string) {
+        let nome = ''
+        for (let i = 0; i <= dna.length; i++) {
+            if (dna[i] === 'A') {
+                nome += 'T'
+            }
+            if (dna[i] === 'T') {
+                nome += 'A'
+            }
+            if (dna[i] === 'C') {
+                nome += 'G'
+            } if (dna[i] === 'G') {
+                nome += 'C'
+            }
+        }
+        return nome
+    }
+}
+
 // 7 Kyu Grasshopper - Summation
 
 /* Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
 
 For example (Input -> Output): */
- 
-export function summation(num:number) {
+
+export function summation(num: number) {
     let total = 0
-     if (num === 0){
-          total =1
-          return total
-     }
-     if (num > 0) {
-         
-         for (let i = 0; i <= num; i++) {
-             total += i
-         }
-         return total
- 
-     }
- }
+    if (num === 0) {
+        total = 1
+        return total
+    }
+    if (num > 0) {
+
+        for (let i = 0; i <= num; i++) {
+            total += i
+        }
+        return total
+
+    }
+}
 
 //  8 kyu  Remove String Spaces
 
@@ -73,8 +102,8 @@ Return your answer as a number. */
 
 export function sumMix(x: (string | number)[]): number {
 
-    return  x.reduce<number>((numA,numT) => numA + +numT,0);
-     
+    return x.reduce<number>((numA, numT) => numA + +numT, 0);
+
 }
 
 //7 kyu Regex validate PIN code
@@ -89,9 +118,9 @@ Examples (Input --> Output)
 "1234"   -->  true
 "12345"  -->  false
 "a234"   -->  false 
-*/ 
+*/
 
-export function validatePIN(pin:string):boolean {
+export function validatePIN(pin: string): boolean {
     const regex = /\D/
 
     if ((!regex.test(pin)) && (pin.length == 6 || pin.length == 4)) {
@@ -99,7 +128,7 @@ export function validatePIN(pin:string):boolean {
     } else {
         return false
     }
-  
+
 }
 
 
@@ -115,9 +144,9 @@ Sam Harris => S.H
 
 patrick feeney => P.F */
 
-function abbrevName(name:string):string {
-    
-    return  name.split(' ').map(( x) => x.slice(0,1)).join(' ').toUpperCase()
+function abbrevName(name: string): string {
+
+    return name.split(' ').map((x) => x.slice(0, 1)).join(' ').toUpperCase()
 }
 
 
@@ -129,9 +158,9 @@ Simple, given a string of words, return the length of the shortest word(s).
 String will never be empty and you do not need to account for different data types.
 */
 
-export function findShort(s:string):number {
-    return Math.min(...s.split(' ').map( x => x.length))
-   
+export function findShort(s: string): number {
+    return Math.min(...s.split(' ').map(x => x.length))
+
 }
 
 
@@ -147,13 +176,13 @@ If input data is invalid you should return 0 (as in no breaks are needed if we d
 */
 
 
-function breakChocolate(n:number, m:number):number {
-    return n <1 || m < 1 ? 0 : (n * m) -1
-    }
+function breakChocolate(n: number, m: number): number {
+    return n < 1 || m < 1 ? 0 : (n * m) - 1
+}
 
 
-    function squareDigits(num:number)    {
-        return  +(num.toString().split('').map((x) => +x * +x).join(''))
+function squareDigits(num: number) {
+    return +(num.toString().split('').map((x) => +x * +x).join(''))
 }
 
 
@@ -166,13 +195,13 @@ For example: month 2 (February), is part of the first quarter; month 6 (June), i
 */
 
 export function quarterOf(month: number): number {
-    if(month <=3){
-      return 1
-    }else if(month <= 6){
-      return 2
-    }else if (month <= 9){
-      return 3
-    }else{
-      return 4
+    if (month <= 3) {
+        return 1
+    } else if (month <= 6) {
+        return 2
+    } else if (month <= 9) {
+        return 3
+    } else {
+        return 4
     }
-   }
+}
