@@ -1,3 +1,25 @@
+// 7 Kyu Grasshopper - Summation
+
+/* Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+For example (Input -> Output): */
+ 
+export function summation(num:number) {
+    let total = 0
+     if (num === 0){
+          total =1
+          return total
+     }
+     if (num > 0) {
+         
+         for (let i = 0; i <= num; i++) {
+             total += i
+         }
+         return total
+ 
+     }
+ }
+
 //  8 kyu  Remove String Spaces
 
 // Simple, remove the spaces from the string, then return the resultant string.
