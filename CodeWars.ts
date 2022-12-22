@@ -1,3 +1,25 @@
+// 7 Kyu Grasshopper - Summation
+
+/* Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+For example (Input -> Output): */
+
+export function summation(num: number) {
+    let total = 0
+    if (num === 0) {
+        total = 1
+        return total
+    }
+    if (num > 0) {
+
+        for (let i = 0; i <= num; i++) {
+            total += i
+        }
+        return total
+
+    }
+}
+
 /* 7 kyu Complementary DNA
     Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
 
@@ -22,32 +44,13 @@ export class Kata {
             } if (dna[i] === 'G') {
                 nome += 'C'
             }
+            
         }
         return nome
     }
 }
+ 
 
-// 7 Kyu Grasshopper - Summation
-
-/* Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
-
-For example (Input -> Output): */
-
-export function summation(num: number) {
-    let total = 0
-    if (num === 0) {
-        total = 1
-        return total
-    }
-    if (num > 0) {
-
-        for (let i = 0; i <= num; i++) {
-            total += i
-        }
-        return total
-
-    }
-}
 
 //  8 kyu  Remove String Spaces
 
