@@ -1,3 +1,26 @@
+// 7 kyu Regex validate PIN code
+
+/* ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+If the function is passed a valid PIN string, return true, else return false.
+
+Examples (Input --> Output)
+"1234"   -->  true
+"12345"  -->  false
+"a234"   -->  false 
+
+*/
+
+function validatePIN(pin) {
+    const regex = /\D/
+
+    if ((!regex.test(pin)) && (pin.length == 6 || pin.length == 4)) {
+        return true
+    } else {
+        return false
+    }
+}
+
 /* 7 Kyu  -  Square Every Digit
 
 Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
@@ -105,28 +128,7 @@ function countPositivesSumNegatives(num) {
 }
 
 
-// 7 kyu Regex validate PIN code
 
-/* ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
-
-If the function is passed a valid PIN string, return true, else return false.
-
-Examples (Input --> Output)
-"1234"   -->  true
-"12345"  -->  false
-"a234"   -->  false 
-
-*/
-
-function validatePIN(pin) {
-    const regex = /\D/
-
-    if ((!regex.test(pin)) && (pin.length == 6 || pin.length == 4)) {
-        return true
-    } else {
-        return false
-    }
-}
 
 
 // 8 kyu Find the smallest integer in the array
