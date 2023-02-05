@@ -11,6 +11,7 @@ export function summation(num: number) {
         total = 1
         return total
         
+        
     }
     if (num > 0) {
 
