@@ -10,6 +10,7 @@ export function summation(num: number) {
     if (num === 0) {
         total = 1
         return total
+        
           
     }
     if (num > 0) {
