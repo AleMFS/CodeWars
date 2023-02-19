@@ -13,6 +13,7 @@ Examples (Input --> Output)
 
 function validatePIN(pin) {
     const regex = /\D/
+    
 
     if ((!regex.test(pin)) && (pin.length == 6 || pin.length == 4)) {
         return true
